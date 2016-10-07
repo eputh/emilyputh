@@ -21,9 +21,13 @@
 	});
 	
 	function adjustWindow(){
-		
-		var s = skrollr.init();
-		
+
+		var s;
+
+		if ($(window).width() > 767) {
+			s = skrollr.init();
+		}
+
 		// get window size
 	    winH = $window.height();
 	    

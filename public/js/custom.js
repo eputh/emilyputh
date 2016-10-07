@@ -1,73 +1,1 @@
-
-// JavaScript Document
-$('#subscribeform').submit(function(){
-
-	var action = $(this).attr('action');
-
-		$("#mesaj").slideUp(750,function() {
-
-
-
-		$('#mesaj').hide();
-
-	$('#subsubmit')
-
-
-
-			.after('')
-
-
-
-			.attr('disabled','disabled');
-
-	$.post(action, {
-
-
-
-			email: $('#subemail').val()
-
-
-
-		},
-
-
-
-			function(data){
-
-
-
-				document.getElementById('mesaj').innerHTML = data;
-
-
-
-				$('#mesaj').slideDown('slow');
-
-
-
-				$('#subscribeform img.subscribe-loader').fadeOut('slow',function(){$(this).remove()});
-
-
-
-				$('#subsubmit').removeAttr('disabled');
-
-
-
-				if(data.match('success') != null) $('#subscribeform').slideUp('slow');
-
-			}
-
-
-
-		);
-
-
-
-		});
-
-
-
-		return false;
-
-
-
-	});
+$(document).ready(function(){	var $slider = $('.skills-slider').slick({		centerMode: true,		centerPadding: '0',		slidesToShow: 3,		arrows: true,		responsive: [{			breakpoint: 400,			settings: {				centerPadding: '20px',				slidesToShow: 1			}		}, {			breakpoint: 600,			settings: {				centerPadding: '40px',				slidesToShow: 1			}		}, {			breakpoint: 1024,			settings: {				centerPadding: '40px',				slidesToShow: 2			}		}]	});	$('.skills .arrow.arrow-left').on('click', function (event) {		$slider.slick('slickPrev');	});	$('.skills .arrow.arrow-right').on('click', function (event) {		$slider.slick('slickNext');	});});
