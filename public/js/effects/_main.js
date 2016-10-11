@@ -26,19 +26,21 @@
 
 		if ($(window).width() > 767) {
 			s = skrollr.init();
+			
+			// get window size
+			winH = $window.height();
+
+			if(winH <= 550) {
+				winH = 550;
+			}
+
+			$slide.height(winH*2);
+			$('#slide-2, #slide-3').height(winH*3);
+
+			s.refresh($('.homeSlide'));
 		}
 
-		// get window size
-	    winH = $window.height();
-	    
-	    if(winH <= 550) {
-			winH = 550;
-		} 
-	    
-	    $slide.height(winH*2);
-	    $('#slide-2, #slide-3').height(winH*3);
-	    
-	    s.refresh($('.homeSlide'));
+
 	    
 	}
 
