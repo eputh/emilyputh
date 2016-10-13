@@ -3,6 +3,10 @@
     padding: 2em 2em;
 }
 
+@media (max-width: 767px) {
+    .content { padding: 0 0}
+}
+
 .input {
     position: relative;
     z-index: 1;
@@ -201,11 +205,17 @@ Type Headline
     width: 90%;
     max-width: 768px;
     text-align: center;
+    height: auto;
 }
 
 .cd-intro {
     margin: 4em auto;
 }
+
+.cd-intro .emphasized-container {
+    position: relative;
+}
+
 @media only screen and (min-width: 768px) {
     .cd-intro {
         margin: 5em auto;
@@ -245,7 +255,7 @@ Type Headline
     display: inline-block;
     position: relative;
     text-align: left;
-    padding-right: 4px;
+    padding-right: 2px;
 }
 .cd-words-wrapper b {
     display: inline-block;

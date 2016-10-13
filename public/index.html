@@ -16,6 +16,7 @@
     <!-- style -->
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/effects/text.css" rel="stylesheet" type="text/css">
+    <link href="css/effects/parallax-scroll.css" rel="stylesheet" type="text/css">
 
     <!-- bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -57,43 +58,28 @@
     </header>
     <!-- header -->
 
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=580445718641008";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-    <!--[if lt IE 7]>
-    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
 
-    <div id="preloader">
-        <img src="images/background1.png" />
-        <img src="images/background2.png" />
-        <img src="images/background3.png" />
-    </div>
     <main>
         <section class="main-effect" data-top="background-color: rgba(248,249,249,1)" data-center-bottom="background-color: rgba(248,249,249,1)" data--200p-top="background-color: rgba(248,249,249,1)" data-anchor-target="#slide-1">
             <section id="slide-1" class="homeSlide">
                 <div class="bcg" data-top="opacity: 1; width: 100%; height: 100%; top: 0%; left: 0%;" data-center="opacity: 0; width: 156%; height: 156%; top: -28%; left: -28%;" data-anchor-target="#slide-1">
                 </div>
                 <div class="plaxEl" data-0p-top="opacity: 1" data-center="opacity: 1;" data-100p-top="opacity: 1; position: fixed; top: 25%; width: 100%; left: 0;" data--25p-bottom="opacity: 0;" data--20p-bottom="opacity: 1;" data-anchor-target="#slide-1">
-                    <h2>Hello there!<span>I'm Emily Puth.</span></h2>
                     <section class="cd-intro">
-                        <h3 class="cd-headline letters type"><span>
-                            I am a developer and designer who enjoys translating her skills and passions into beautiful and intuitive software.
-                        </span></h3>
-                        <h3 class="cd-headline letters type">
-                            <span>I love to </span>
-                            <span class="cd-words-wrapper waiting">
-                                <b class="is-visible">design</b>
-                                <b>code</b>
-                                <b>optimize</b>
-                            </span>
-                            <span>.</span>
-                        </h3>
+                        <div class="emphasized-container">
+                            <h2>Hello there!<span>I'm Emily Puth.</span></h2>
+                            <h3 class="cd-headline letters type"><span>
+                                I am a developer and designer who enjoys translating her skills and passions into beautiful and intuitive software.
+                            </span></h3>
+                            <h3 class="cd-headline letters type">
+                                <span>I love to </span>
+                                <span class="cd-words-wrapper waiting">
+                                    <b class="is-visible">design</b>
+                                    <b>code</b>
+                                    <b>optimize</b>
+                                </span>
+                            </h3>
+                        </div>
                     </section> <!-- type headline -->
                 </div>
             </section>
@@ -104,14 +90,14 @@
             </div>
             <div class="plaxEl" data-top="opacity: 1; position: fixed; top: 15%; width: 100%; left: 0;" data-center="opacity: 1;" data-10p-bottom="opacity: 1;" data-bottom="opacity: 0;" data-anchor-target="#slide-2">
                 <section class="container">
-                    <h2><span>What do I offer?</span></h2>
                     <section class="skills">
                         <div class="emphasized-container">
+                            <h2><span>What do I offer?</span></h2>
                             <i class="arrow arrow-left fa fa-chevron-circle-left" aria-hidden="true"></i>
                             <div class="skills-slider container with-margin">
 
                                 <div class="skill">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p>With my analytic mindset, passion for problem-solving, and eagerness to learn and collaborate, I will contribute greatly in building consistent and optimal software that will fulfill our goals.</p>
                                     <p class="name">Java Software Development</p>
                                 </div>
 
@@ -130,7 +116,7 @@
                                 </div>
 
                                 <div class="skill">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p>I craft aesthetically pleasing websites with sleek and seamless interfacing and functionality, so that our target group is given an amazing user experience.</p>
                                     <p class="name">Front End Web Development</p>
                                 </div>
 
@@ -221,6 +207,7 @@
     </main>
     <!-- main -->
 
+
     <section class="to-top">
         <div class="container">
             <div class="row">
@@ -279,7 +266,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/effects/masonry.pkgd.min.js"  type="text/javascript"></script>
-    <script src="js/effects/imagesloaded.js"  type="text/javascript"></script>
     <script src="js/effects/classie.js"  type="text/javascript"></script>
     <script src="js/effects/AnimOnScroll.js"  type="text/javascript"></script>
     <script src="js/effects/modernizr.custom.js"></script>
