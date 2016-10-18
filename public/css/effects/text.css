@@ -1,6 +1,6 @@
 .content {
     font-size: 150%;
-    padding: 2em 2em;
+    padding: 0 2em;
 }
 
 @media (max-width: 767px) {
@@ -31,6 +31,7 @@
     background: #fff;
     color: #aaa;
     font-weight: 400;
+    font-size: 18px;
     font-family: "Montserrat", sans-serif;
     -webkit-appearance: none; /* for box shadows to show on iOS */
 }
@@ -117,13 +118,13 @@
     position: absolute;
     top: -200%;
     left: 0;
-    color: #77bcc7;
+    color: #d8c370;
     font-weight: 800;
 }
 
 .input__field--chisato:focus,
 .input--filled .input__field--chisato {
-    border-color: #77bcc7;
+    border-color: #d8c370;
 }
 
 .input__field--chisato:focus + .input__label--chisato,
@@ -248,7 +249,7 @@ Type Headline
 @media only screen and (min-width: 1170px) {
     .cd-headline {
         font-family: "Montserrat", sans-serif;
-        font-size: 2.5rem;
+        font-size: 20px;
     }
 }
 .cd-words-wrapper {
