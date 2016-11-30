@@ -145,8 +145,8 @@ text-align: center;
 
 .main-button :hover {
 	color: #fff !important;
-	background-color: #77bcc7 !important;
-	border-color: #77bcc7 !important;
+	background-color: #aabb6e !important;
+	border-color: #aabb6e !important;
 }
 
 /* ==========================================================================
@@ -258,9 +258,9 @@ Main
 .main-home-wrapper h2{
 	font-family: 'Affogato-Medium', 'Open Sans', sans-serif;
 	font-size:50px;
-	line-height:70px;
 	color:#454545;
-	font-weight:600
+	font-weight:600;
+	margin-top: 0;
 }
 
 .main-home-wrapper h2 span{
@@ -319,7 +319,7 @@ footer[role="footer"] nav{
 
 .footer nav > ul > li:hover a{
 	text-decoration:none;
-	color:#77bcc7;
+	color:#aabb6e;
 }
 
 .footer ul[role="social-icons"]{
@@ -347,7 +347,7 @@ footer[role="footer"] nav{
 }
 
 .footer ul[role="social-icons"] > li:hover a{
-	background-color:#77bcc7;
+	background-color:#aabb6e;
 }
 
 .footer .copy-right{
@@ -363,7 +363,7 @@ To top
 ========================================================================== */
 .to-top {
 	height: 60px;
-	background-color: #f6f6f6; }
+	background-color: #eee; }
 .to-top .to-top-wrap {
 	height: 60px;
 	width: 70px;
@@ -377,7 +377,7 @@ To top
 	color: #fff;
 	background-color: rgba(0, 0, 0, 0.15); }
 .to-top .to-top-wrap a:hover, .to-top .to-top-wrap a:focus {
-	background-color: #77bcc7;
+	background-color: #aabb6e;
 }
 .to-top .to-top-wrap i {
 	font-size: 30px;
@@ -553,34 +553,15 @@ Featured
 
 .featured a:hover {
 	text-decoration:none;
-	color:#77bcc7;
+	color:#aabb6e;
 }
 
 
 
 /* ==========================================================================
-About Me
+Contact Me
 ========================================================================== */
-.aboutme {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	-moz-box-orient: vertical;
-	-moz-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	min-height: 430px;
-	font-size: 1rem;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+.contact-me {
 	text-align: center;
-	border-radius: 4px;
-	margin: 20px 5px;
-	padding: 3rem;
 	background-color: #eee;
 }

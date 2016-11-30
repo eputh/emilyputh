@@ -27,8 +27,7 @@
 .grid figure figcaption {
 	padding:0;
 	color: #FFF;
-	text-transform: uppercase;
-	font-size: 1.25em;
+	font-size: 18px;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	line-height:100%;
@@ -61,11 +60,9 @@
 
 .grid figure h2 {
 	word-spacing: -0.15em;
-	font-weight:400; color:#FFF;
-}
-
-.grid figure h2 span {
-	font-weight: 800;
+	font-weight:400;
+	color:#FFF;
+	text-transform: uppercase;
 }
 
 .grid figure h2, .grid figure p {
@@ -74,7 +71,11 @@
 
 .grid figure p {
 	letter-spacing: 1px;
-	font-size:16px; line-height:22px;
+	font-family: 'Montserrat', sans-serif;
+	font-size:16px;
+	color: #FFF;
+	line-height:22px;
+	text-align: center;
 }
 
 
@@ -128,11 +129,11 @@ figure.effect-bubba figcaption::after {
 }
 
 figure.effect-bubba h2 {
-	padding-top: 30%;
-	-webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-	-webkit-transform: translate3d(0,-20px,0);
-	transform: translate3d(0,-20px,0);
+	padding-top: 10%;
+	/*-webkit-transition: -webkit-transform 0.35s;*/
+	/*transition: transform 0.35s;*/
+	/*-webkit-transform: translate3d(0,-20px,0);*/
+	/*transform: translate3d(0,-20px,0);*/
 }
 
 figure.effect-bubba p {
