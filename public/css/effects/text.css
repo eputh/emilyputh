@@ -12,12 +12,12 @@
     z-index: 1;
     display: inline-block;
     margin: 1em;
-    max-width: 350px;
+    /*max-width: 350px;*/
     width: calc(100% - 2em);
     vertical-align: top;
     color: #454545;
     font-weight: 400;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Playfair Display", serif;
 }
 
 .input__field {
@@ -32,7 +32,7 @@
     color: #454545;
     font-weight: 400;
     font-size: 18px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Playfair Display", serif;
     -webkit-appearance: none; /* for box shadows to show on iOS */
 }
 
@@ -84,17 +84,14 @@
 
 .input--chisato {
     padding-top: 1.5em;
+    width: 100%
 }
 
 .input__field--chisato {
     width: 100%;
     padding: 0.7em 0.5em;
     background: #fff;
-    border: 2px solid;
     color: #454545;
-    border-color: #b5b5b5;
-    -webkit-transition: border-color 0.25s;
-    transition: border-color 0.25s;
 }
 
 .input__label--chisato {
@@ -119,7 +116,7 @@
 .input__label-content--chisato::after {
     content: attr(data-content);
     position: absolute;
-    top: -200%;
+    top: -220%;
     left: 0;
     color: #d8c370;
     font-weight: 800;
@@ -237,21 +234,21 @@ Type Headline
 }
 @media only screen and (max-width: 768px) {
     .cd-headline {
-        font-family: "Montserrat", sans-serif;
+        font-family: "Playfair Display", serif;
         font-size: 18px;
         font-weight: 300;
     }
 }
 @media only screen and (min-width: 768px) {
     .cd-headline {
-        font-family: "Montserrat", sans-serif;
+        font-family: "Playfair Display", serif;
         font-size: 1.5rem;
         font-weight: 300;
     }
 }
 @media only screen and (min-width: 1170px) {
     .cd-headline {
-        font-family: "Montserrat", sans-serif;
+        font-family: "Playfair Display", serif;
         font-size: 20px;
     }
 }

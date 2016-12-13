@@ -53,7 +53,7 @@ body, html {
 
 .homeSlide h2 {
     display:block;
-    font-family: 'Affogato-Medium', 'Open Sans', sans-serif;
+    font-family: 'Affogato-Regular', 'Open Sans', sans-serif;
     font-size:54px;
     color:#454545;
     line-height: 60px;
@@ -62,10 +62,9 @@ body, html {
 }
 .homeSlide h2 span{
     display:block;
-    font-family: 'Affogato-Bold', 'Open Sans', sans-serif;
     font-size:80px;
     line-height: 80px;
-    color:#5E798A;
+    color:#f5f5f5;
 }
 .homeSlide p {
     display: block;
@@ -85,7 +84,7 @@ body, html {
 
 }
 .homeSlide a {
-    color: #5E798A;
+    color: #8591c9;
     text-decoration: underline;
 }
 

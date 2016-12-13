@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 /* ==========================================================================
 Fonts
 ========================================================================== */
@@ -108,7 +108,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 a {
 	text-decoration: none;
 	outline: none;
-	color: #5E798A;
+	color: #8591c9;
 	transition-delay: 0s;
 	transition-duration: 0.6s;
 	transition-property: all;
@@ -117,7 +117,7 @@ a {
 
 p {
 	color: #454545;
-	font-family: "Montserrat", sans-serif;
+	font-family: "Playfair Display", serif;
 	font-size: 18px;
 	line-height: 30px;
 	text-align: left;
@@ -125,15 +125,15 @@ p {
 
 a:focus, img:focus, button:focus, .btn:focus {outline: none;}
 
-::-moz-selection {background-color:#5E798A;color:#fff;text-shadow:none;}
+::-moz-selection {background-color:#8591c9;color:#fff;text-shadow:none;}
 
-::selection {background-color: #5E798A;color: #fff;text-shadow: none;}
+::selection {background-color: #8591c9;color: #fff;text-shadow: none;}
 
 .btn-theme {
 	font-family: 'Affogato-Medium', 'Open Sans', sans-serif;
 	color: #fff;
-	background-color: #5E798A;
-	border-color: #5E798A;
+	background-color: #8591c9;
+	border-color: #8591c9;
 }
 
 
@@ -145,8 +145,8 @@ text-align: center;
 
 .main-button :hover {
 	color: #fff !important;
-	background-color: #aabb6e !important;
-	border-color: #aabb6e !important;
+	background-color: #75e4e5 !important;
+	border-color: #75e4e5 !important;
 }
 
 /* ==========================================================================
@@ -219,7 +219,7 @@ header[role="header"] nav #menu-button {
 	display:block;
 	width:60px;
 	height:60px;
-	background-color:#5E798A;
+	background-color:#8591c9;
 	color:#454545;
 	line-height:60px;
 	font-size:30px;
@@ -244,7 +244,7 @@ Main
 .main-home-wrapper,main[role="main-inner-wrapper"] {
 	padding:90px 0;
 	position: relative;
-	background-color: #f6f6f6;
+	/*background-color: #f6f6f6;*/
 }
 
 .main-home-wrapper article[role="pge-title-content"],main[role="main-inner-wrapper"] article[role="pge-title-content"]{
@@ -252,27 +252,27 @@ Main
 }
 
 .main-home-wrapper article[role="pge-title-content"] header,main[role="main-inner-wrapper"] article[role="pge-title-content"] header{
-	padding-bottom:19px;
+	padding-bottom:50px;
 }
 
 .main-home-wrapper h2{
-	font-family: 'Affogato-Medium', 'Open Sans', sans-serif;
+	font-family: 'Affogato-Regular', 'Open Sans', sans-serif;
 	font-size:50px;
-	color:#454545;
+	color:#fbfdff;
 	font-weight:600;
 	margin-top: 0;
 }
 
 .main-home-wrapper h2 span{
 	display:block;
-	font-family: 'Affogato-Bold', 'Open Sans', sans-serif;
+	font-family: 'Affogato-Regular', 'Open Sans', sans-serif;
 	font-size:80px;
 	line-height: 100px;
-	color:#5E798A;
+	color:#8591c9;
 }
 
 .main-home-wrapper p{
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Playfair Display", serif;
 	font-size:18px;
 	line-height:30px;
 	color:#454545;
@@ -319,7 +319,7 @@ footer[role="footer"] nav{
 
 .footer nav > ul > li:hover a{
 	text-decoration:none;
-	color:#aabb6e;
+	color:#75e4e5;
 }
 
 .footer ul[role="social-icons"]{
@@ -338,7 +338,7 @@ footer[role="footer"] nav{
 	display:block;
 	width:42px;
 	height:42px;
-	background-color:#5E798A;
+	background-color:#8591c9;
 	color:#FFF;
 	line-height:42px;
 	font-size:20px;
@@ -347,7 +347,7 @@ footer[role="footer"] nav{
 }
 
 .footer ul[role="social-icons"] > li:hover a{
-	background-color:#aabb6e;
+	background-color:#75e4e5;
 }
 
 .footer .copy-right{
@@ -357,33 +357,6 @@ footer[role="footer"] nav{
 	line-height:13px;
 	color: #FFF;
 }
-
-/* ==========================================================================
-To top
-========================================================================== */
-.to-top {
-	height: 60px;
-	background-color: #eee; }
-.to-top .to-top-wrap {
-	height: 60px;
-	width: 70px;
-	position: absolute;
-	right: 0;
-	text-align: center; }
-.to-top .to-top-wrap a {
-	display: block;
-	width: 100%;
-	height: 100%;
-	color: #fff;
-	background-color: rgba(0, 0, 0, 0.15); }
-.to-top .to-top-wrap a:hover, .to-top .to-top-wrap a:focus {
-	background-color: #aabb6e;
-}
-.to-top .to-top-wrap i {
-	font-size: 30px;
-	line-height: 55px; }
-.to-top .row {
-	position: relative; }
 
 
 
@@ -404,15 +377,21 @@ To top
 Skills
 ========================================================================== */
 .skills {
-	padding-bottom: 4rem;
-	height: auto;
+	height: 100%;
 	display: block;
+	/*background-image:url('../images/background3.png');*/
+	background: #454545;
+	background: -webkit-linear-gradient(left top, #8d58c6, #75e4e5); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right,  #8d58c6, #75e4e5); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right,  #8d58c6, #75e4e5); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right,  #8d58c6, #75e4e5); /* Standard syntax */
 }
 .skills .emphasized-container {
 	position: relative;
 }
 .skills .emphasized-container .arrow {
 	display: block;
+	color: #fbfdff;
 	font-size: 30px;
 	top: 50%;
 	position: absolute;
@@ -433,6 +412,10 @@ Skills
 	position: relative;
 	overflow: hidden;
 	width: 100%;
+}
+.skills h2 span {
+	text-align: center;
+	color: #fbfdff;
 }
 .skills .container .skill {
 	display: -webkit-box;
@@ -455,8 +438,8 @@ Skills
 	border-radius: 4px;
 	margin: 20px 5px;
 	padding: 3rem;
-	background-color: white;
-	box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.12);
+	background-color: #fbfdff;
+	box-shadow: 8px 8px 16px 4px rgba(0, 0, 0, 0.12);
 }
 .skills .container .skill p:nth-child(2) {
 	margin: 1rem 0;
@@ -475,27 +458,29 @@ Skills
 	margin-bottom: 0.5rem;
 }
 .skills .container .skill .name {
-	color: #5E798A;
-	font-weight: bold;
+	color: #8591c9;
+	/*background: -webkit-linear-gradient(#8c5ec1, #7ae1e2);*/
+	/*-webkit-background-clip: text;*/
+	/*-webkit-text-fill-color: transparent;*/
 	font-size: 30px;
 	line-height: 34px;
-	font-family: 'Affogato-Bold', 'Open Sans', sans-serif;
+	font-family: 'Affogato', 'Open Sans', sans-serif;
 }
 
 
 
 /* ==========================================================================
-Featured
+Portfolio
 ========================================================================== */
-.featured {
-	padding-bottom: 4rem;
+.portfolio {
 	height: auto;
 	display: block;
+	background-color: #f6f6f6;
 }
-.featured .emphasized-container {
+.portfolio .emphasized-container {
 	position: relative;
 }
-.featured .project {
+.portfolio .project {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -520,11 +505,7 @@ Featured
 	box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.12);
 }
 
-.featured h2 {
-	text-align: center;
-}
-
-.featured .project .picture {
+.portfolio .project .picture {
 	background-position: center;
 	background-size: cover;
 	height: 100%;
@@ -533,8 +514,8 @@ Featured
 	margin-bottom: 0.5rem;
 }
 
-.featured .project .name {
-	color: #5E798A;
+.portfolio .project .name {
+	color: #8591c9;
 	font-weight: bold;
 	font-size: 34px;
 	line-height: 40px;
@@ -542,7 +523,11 @@ Featured
 	font-family: 'Affogato-Bold', 'Open Sans', sans-serif;
 }
 
-.featured a {
+.portfolio h2 {
+	color: #454545;
+}
+
+.portfolio a {
 	display: inline-block;
 	text-transform:uppercase;
 	font-size:18px;
@@ -551,9 +536,9 @@ Featured
 	margin:0 13px
 }
 
-.featured a:hover {
+.portfolio a:hover {
 	text-decoration:none;
-	color:#aabb6e;
+	color:#75e4e5;
 }
 
 
@@ -563,5 +548,9 @@ Contact Me
 ========================================================================== */
 .contact-me {
 	text-align: center;
-	background-color: #eee;
+	background: #eee;
+	background: -webkit-linear-gradient(left top, #75e4e5, #8d58c6); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #75e4e5, #8d58c6); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #75e4e5, #8d58c6); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #75e4e5, #8d58c6); /* Standard syntax */
 }
