@@ -12,8 +12,6 @@
     z-index: 1;
     display: inline-block;
     margin: 1em;
-    /*max-width: 350px;*/
-    width: calc(100% - 2em);
     vertical-align: top;
     color: #454545;
     font-weight: 400;
@@ -84,7 +82,8 @@
 
 .input--chisato {
     padding-top: 1.5em;
-    width: 100%
+    width: 100%;
+    margin-left: 0;
 }
 
 .input__field--chisato {
@@ -92,6 +91,8 @@
     padding: 0.7em 0.5em;
     background: #fff;
     color: #454545;
+    -webkit-transition: border-color 0.25s;
+    transition: border-color 0.25s;
 }
 
 .input__label--chisato {
@@ -107,7 +108,7 @@
 }
 
 .input__label-content--chisato {
-    padding: 0 1em;
+    padding: 0 12px;
     font-weight: 400;
     font-size: 18px;
     color: #b5b5b5;
@@ -116,15 +117,18 @@
 .input__label-content--chisato::after {
     content: attr(data-content);
     position: absolute;
-    top: -220%;
-    left: 0;
-    color: #d8c370;
-    font-weight: 800;
+    top: -200%;
+    left: 12px;
+    font-size: 14px;
+    color: #f5f5f5;
 }
 
 .input__field--chisato:focus,
 .input--filled .input__field--chisato {
-    border-color: #d8c370;
+    border-color:#f5f5f5;
+    outline:0;
+    -webkit-box-shadow:inset 0 0.1em 0.1em rgba(0,0,0,.075),0 0 8px #f5f5f5;
+    box-shadow:inset 0 0.1em 0.1em rgba(0,0,0,.075),0 0 8px #f5f5f5;
 }
 
 .input__field--chisato:focus + .input__label--chisato,
@@ -231,7 +235,7 @@ Type Headline
 .cd-headline {
     font-size: 3rem;
     line-height: 1.2;
-    color: #f5f5f5
+    color: #454545;
 }
 @media only screen and (max-width: 768px) {
     .cd-headline {
