@@ -210,7 +210,7 @@ Type Headline
     width: 90%;
     max-width: 768px;
     text-align: center;
-    height: auto;
+    height: 100vh;
 }
 
 .cd-intro {

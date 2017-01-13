@@ -434,6 +434,10 @@ Skills
 	transform: translate(0, -50%);
 	cursor: pointer;
 }
+.skills .emphasized-container .arrow.arrow-left:hover,
+.skills .emphasized-container .arrow.arrow-right:hover {
+	color: #77bcc7;
+}
 .skills .emphasized-container .arrow.arrow-left {
 	left: 10px;
 	z-index: 100;
@@ -472,19 +476,6 @@ Skills
 }
 .skills .container .skill p:nth-child(2) {
 	margin: 1rem 0;
-}
-.skills .container .skill img {
-	max-width: 80%;
-	margin: 0 auto;
-}
-.skills .container .skill .picture {
-	background-position: center;
-	background-size: cover;
-	height: 40px;
-	width: 40px;
-	border-radius: 50%;
-	margin: auto;
-	margin-bottom: 0.5rem;
 }
 .skills .container .skill .name {
 	color: #5E798A;

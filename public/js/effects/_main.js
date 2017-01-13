@@ -1,4 +1,7 @@
 /*! viewportSize | Author: Tyson Matanich, 2013 | License: MIT */
+/* ==========================================================================
+ Parallax Scroll - background effect
+ ========================================================================== */
 (function(n){n.viewportSize={},n.viewportSize.getHeight=function(){return t("Height")},n.viewportSize.getWidth=function(){return t("Width")};var t=function(t){var f,o=t.toLowerCase(),e=n.document,i=e.documentElement,r,u;return n["inner"+t]===undefined?f=i["client"+t]:n["inner"+t]!=i["client"+t]?(r=e.createElement("body"),r.id="vpw-test-b",r.style.cssText="overflow:scroll",u=e.createElement("div"),u.id="vpw-test-d",u.style.cssText="position:absolute;top:-1000px",u.innerHTML="<style>@media("+o+":"+i["client"+t]+"px){body#vpw-test-b div#vpw-test-d{"+o+":7px!important}}<\/style>",r.appendChild(u),i.insertBefore(r,e.head),f=u["offset"+t]==7?i["client"+t]:n["inner"+t],i.removeChild(r)):f=n["inner"+t],f}})(this);
 
 ( function( $ ) {
@@ -44,6 +47,10 @@
 	    
 	}
 
+
+/* ==========================================================================
+ Headline - Typing Effect
+ ========================================================================== */
 	var animationDelay = 2500,
 	//loading bar effect
 		barAnimationDelay = 3800,
@@ -195,5 +202,40 @@
 		$oldWord.removeClass('is-visible').addClass('is-hidden');
 		$newWord.removeClass('is-hidden').addClass('is-visible');
 	}
-		
+
+
+	/* ==========================================================================
+	 Input Label
+	 ========================================================================== */
+	// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+	if (!String.prototype.trim) {
+		(function() {
+			// Make sure we trim BOM and NBSP
+			var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+			String.prototype.trim = function() {
+				return this.replace(rtrim, '');
+			};
+		})();
+	}
+
+	[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+		// in case the input is already filled..
+		if( inputEl.value.trim() !== '' ) {
+			classie.add( inputEl.parentNode, 'input--filled' );
+		}
+
+		// events:
+		inputEl.addEventListener( 'focus', onInputFocus );
+		inputEl.addEventListener( 'blur', onInputBlur );
+	} );
+
+	function onInputFocus( ev ) {
+		classie.add( ev.target.parentNode, 'input--filled' );
+	}
+
+	function onInputBlur( ev ) {
+		if( ev.target.value.trim() === '' ) {
+			classie.remove( ev.target.parentNode, 'input--filled' );
+		}
+	}
 } )( jQuery );
