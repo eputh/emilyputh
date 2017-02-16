@@ -523,14 +523,6 @@ Featured
 	box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.12);
 }
 
-.featured .project .picture {
-	background-position: center;
-	background-size: cover;
-	height: 100%;
-	width: 100%;
-	margin: auto;
-	margin-bottom: 0.5rem;
-}
 
 .featured .project .name {
 	color: #5E798A;
