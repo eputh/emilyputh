@@ -7,14 +7,17 @@ jQuery(document).ready(function($){
     //open the quick view panel
     $('.cd-trigger').on('click', function(event){
         var selectedImage = $(this).parent('.effect-bubba').children('img'),
-            slectedImageUrl = selectedImage.attr('src');
+            selectedImageUrl = selectedImage.attr('src');
 
         $('.featured').addClass('overlay-layer');
         animateQuickView(selectedImage, sliderFinalWidth, maxQuickWidth, 'open');
 
+        // update the cd-project-info
+        updateProjectInfo(selectedImageUrl);
+
         //update the visible slider image in the quick view panel
         //you don't need to implement/use the updateQuickView if retrieving the quick view data with ajax
-        updateQuickView(slectedImageUrl);
+        updateQuickView(selectedImageUrl);
     });
 
     //close the quick view panel
@@ -42,6 +45,41 @@ jQuery(document).ready(function($){
         }
     });
 
+    function updateProjectInfo(url) {
+        if (url=="images/ageless-link-long.png") {
+            document.getElementById("project-title").innerText = "Ageless Link";
+            document.getElementById("project-link").href = "https://ageless-link.firebaseapp.com";
+            document.getElementById("project-link").innerText = "Visit the Website";
+        } else if (url=="images/canvas-long.png") {
+            document.getElementById("project-title").innerText = "Canvas Course Management System";
+            document.getElementById("project-link").href = "http://sites.uci.edu/canvaspilot/";
+            document.getElementById("project-link").innerText = "View the Case Study";
+        } else if (url=="images/armagriddon-long.png") {
+            document.getElementById("project-title").innerText = "Armagriddon Game Server";
+            document.getElementById("project-link").href = "https://github.com/jlingad/INF122FinalAssignment";
+            document.getElementById("project-link").innerText = "View on GitHub";
+        } else if (url=="images/PSL-SRS-long.png") {
+            document.getElementById("project-title").innerText = "Personal Sustainability Lifestyle App";
+            document.getElementById("project-link").href = "projects/TEAM20-SRS-FINAL.pdf";
+            document.getElementById("project-link").innerText = "View SRS";
+        } else if (url=="images/personal-long.png") {
+            document.getElementById("project-title").innerText = "First Personal Website";
+            document.getElementById("project-link").href = "https://first-personal-website.firebaseapp.com/";
+            document.getElementById("project-link").innerText = "Visit the Website";
+            document.getElementById("project-description").innerHTML = "Check out the research and testing of this website " +
+                "<a href='https://first-personal-website.firebaseapp.com/final-project.html' style='font-size: 18px;" +
+                "text-transform: none; margin: 0 0;'> here.</a>";
+        } else if (url=="images/scribble-long.png") {
+            document.getElementById("project-title").innerText = "Scribble Meeting Scheduler";
+            document.getElementById("project-link").href = "projects/INF151.zip";
+            document.getElementById("project-link").innerText = "View Documents";
+        } else if (url=="images/shopx-long.png") {
+            document.getElementById("project-title").innerText = "ShopX Mobile";
+            document.getElementById("project-link").href = "projects/ShopX-design-studio.pdf";
+            document.getElementById("project-link").innerText = "View Research";
+        }
+    }
+    
     function updateSlider(navigation) {
         var sliderContainer = navigation.parents('.cd-slider-wrapper').find('.cd-slider'),
             activeSlider = sliderContainer.children('.selected').removeClass('selected');
@@ -69,6 +107,7 @@ jQuery(document).ready(function($){
         var close = $('.cd-close'),
             activeSliderUrl = close.siblings('.cd-slider-wrapper').find('.selected img').attr('src'),
             selectedImage = $('.empty-box').find('img');
+
         //update the image in the gallery
         if( !$('.cd-quick-view').hasClass('velocity-animating') && $('.cd-quick-view').hasClass('add-content')) {
             selectedImage.attr('src', activeSliderUrl);

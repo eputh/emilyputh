@@ -273,7 +273,7 @@ Modules - reusable parts of our design
     transform: translateY(7px) rotate(45deg);
 }
 
-.cd-item-info {
+.cd-project-info {
     position: absolute;
     padding: 3em 3em 3em 0;
     visibility: hidden;
@@ -283,33 +283,33 @@ Modules - reusable parts of our design
     transition: opacity .3s, visibility 0s;
 }
 
-.cd-item-info .cd-item-action li {
+.cd-project-info .cd-item-action li {
     display: inline-block;
     margin-right: 1em;
 }
-.cd-item-info .cd-item-action li:first-child {
+.cd-project-info .cd-item-action li:first-child {
     margin-left: -4px;
 }
-.cd-item-info .link {
+.cd-project-info .link {
     color: #f5f5f5;
 }
-.add-content .cd-item-info {
+.add-content .cd-project-info {
     /* class added at the end of the width animation, used to show the content */
     position: relative;
     visibility: visible;
     opacity: 1;
 }
-.add-content .cd-item-info h2 {
+.add-content .cd-project-info h2 {
     -webkit-animation: cd-slide-in 0.3s;
     -moz-animation: cd-slide-in 0.3s;
     animation: cd-slide-in 0.3s;
 }
-.add-content .cd-item-info p {
+.add-content .cd-project-info p {
     -webkit-animation: cd-slide-in 0.4s;
     -moz-animation: cd-slide-in 0.4s;
     animation: cd-slide-in 0.4s;
 }
-.add-content .cd-item-info .cd-item-action {
+.add-content .cd-project-info .cd-item-action {
     -webkit-animation: cd-slide-in 0.5s;
     -moz-animation: cd-slide-in 0.5s;
     animation: cd-slide-in 0.5s;
