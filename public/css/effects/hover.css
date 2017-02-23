@@ -1,7 +1,6 @@
 .grid {
 	position: relative;
 	list-style: none; overflow:hidden;
-	text-align: center;
 }
 
 .grid figure {

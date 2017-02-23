@@ -208,94 +208,6 @@ text-align: center;
 }
 
 /* ==========================================================================
-Header
-========================================================================== */
-
-header[role="header"]{
-	padding-top:80px;
-	padding-bottom:39px;
-}
-
-header[role="header"] h1{
-	padding:0;
-	margin:0
-}
-
-header[role="header"] h1 > a{
-	max-width:66px;
-	display:block;
-	float:left;
-}
-
-header[role="header"] nav{
-	float: right;
-	padding-top:10px;
-	transition-delay: 0s;
-	transition-duration: 0.6s;
-	transition-property: all;
-	transition-timing-function: ease;
-}
-
-header[role="header"] nav ul{
-	display:none;
-	position: fixed;
-	z-index:60;
-	text-align:center;
-	width:100%;
-	height:100%;
-	top:0;
-	left:0;
-	right:0;
-	background-color: rgba(71, 71, 71, 0.8);
-	padding:0; margin:0;
-	padding-top:199px;
-}
-
-header[role="header"] nav ul > li{
-	font-family: 'Affogato-Medium', 'Open Sans', sans-serif;
-	font-weight:800;
-	font-size:50px;
-	display:block;
-}
-
-header[role="header"] nav ul > li > a{
-	display:block;
-	line-height:72px;
-	color: #f6f6f6;
-}
-
-header[role="header"] nav ul > li:hover a,header[role="header"] nav ul > li.nav-active a{
-	text-decoration:none;
-	color:#d8c370;
-	width: 100%;
-}
-
-header[role="header"] nav #menu-button {
-	float: right;
-	position: fixed;
-	z-index:70;
-	display:block;
-	width:60px;
-	height:60px;
-	background-color:#5E798A;
-	color:#454545;
-	line-height:60px;
-	font-size:30px;
-	border-radius:100%;
-	text-align:center;
-
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	-o-transform: rotate(0deg);
-	transform: rotate(0deg);
-	-webkit-transition: .5s ease-in-out;
-	-moz-transition: .5s ease-in-out;
-	-o-transition: .5s ease-in-out;
-	transition: .5s ease-in-out;
-	cursor: pointer;
-}
-
-/* ==========================================================================
 Main
 ========================================================================== */
 
@@ -407,35 +319,6 @@ footer[role="footer"] nav{
 }
 
 /* ==========================================================================
-To top
-========================================================================== */
-.to-top {
-	height: 60px;
-	background-color: #f6f6f6; }
-.to-top .to-top-wrap {
-	height: 60px;
-	width: 70px;
-	position: absolute;
-	right: 0;
-	text-align: center; }
-.to-top .to-top-wrap a {
-	display: block;
-	width: 100%;
-	height: 100%;
-	color: #fff;
-	background-color: rgba(0, 0, 0, 0.15); }
-.to-top .to-top-wrap a:hover, .to-top .to-top-wrap a:focus {
-	background-color: #77bcc7;
-}
-.to-top .to-top-wrap i {
-	font-size: 30px;
-	line-height: 55px; }
-.to-top .row {
-	position: relative; }
-
-
-
-/* ==========================================================================
    Chrome Frame prompt
    ========================================================================== */
 
@@ -473,7 +356,7 @@ Skills
 }
 .skills .emphasized-container .arrow.arrow-left:hover,
 .skills .emphasized-container .arrow.arrow-right:hover {
-	color: #77bcc7;
+	color: #d1d05a;
 }
 .skills .emphasized-container .arrow.arrow-left {
 	left: 10px;
@@ -576,7 +459,6 @@ Featured
 	font-size:18px;
 	color: #f6f6f6;
 	font-family: 'Affogato-Medium', 'Open Sans', sans-serif;
-	margin:0 13px
 }
 
 .featured a:hover {
@@ -584,7 +466,57 @@ Featured
 	color:#77bcc7;
 }
 
+.grid-group:nth-child(odd) {
+	clear: left;
+}
 
+/* ==========================================================================
+Image Grid
+========================================================================== */
+.grid-image-item { float: left; position: relative; background-size: cover; background-position: center; overflow: hidden; }
+.grid-image-item img { display: none; }
+.grid-image-item-large { width: 67%; padding-bottom: 73.6%; }
+.grid-image-item-small { width: 33%; padding-bottom: 36.8%; }
+.grid-image-item-medium { width: 67%; padding-bottom: 36.8%; }
+/* ==========================================================================
+Grid
+========================================================================== */
+.grid:after,
+.grid-group:after { }
+.grid-group { float: left; width: 50%; }
+.grid-group:nth-child(odd) { clear: left; }
+.grid-home { border-right: 5px solid #e5e9ea; border-bottom: 5px solid #e5e9ea;}
+.grid-item { float: left; width: 100%; border-left: 5px solid #e5e9ea; border-top: 5px solid #e5e9ea; }
+.grid-item a { display: block; position: relative; }
+/* Mobile */
+@media (max-width: 767px) {
+	.grid-group { width: 100%; }
+}
+/* ==========================================================================
+Grid Home
+========================================================================== */
+.grid-home  .grid-item-small { float: left; width: 50%; }
+.grid-home  .grid-item-small a { padding-bottom: 106%; }
+.grid-home  .grid-item-medium a { padding-bottom: 52.5%; }
+.grid-home  .grid-item-large a { padding-bottom: 106%; }
+.grid-home .grid-item-head { width: 100%; position: absolute; left: 0; top: 16px; padding: 0 50px 0 20px; z-index: 10; }
+.grid-home .grid-item-head i { position: absolute; right: 20px; top: 50%; margin-top: -8px; color: #5e798a;}
+.grid-home .grid-item-head h6 { font-weight: 900; font-size: .94vw; color: #d1d05a; text-transform: uppercase; letter-spacing: .15em; margin: 0; }
+.grid-home .grid-item-content { width: 100%; position: absolute; left: 0; bottom: 20px; padding: 0 20px; z-index: 10; }
+.grid-home .grid-item-content h5 { margin: 0; font-family: 'Affogato-Regular', sans-serif; font-size: 1.45vw; color: #d1d05a; letter-spacing: .05em; text-transform: uppercase; }
+.grid-home .grid-item-image { width: 100%; height: 100%; position: absolute; left: 0; top: 0; overflow: hidden; background-size: cover; background-position: center; }
+.grid-home .grid-item-image img { display: none; }
+.grid-home .grid-item-primary {background-color: #FFF;}
+.grid-home .grid-item-primary h3 { font-family: 'Affogato-Medium', sans-serif; font-weight: 400; font-size: 2.53vw; color: #5e798a; line-height: .9; margin: 0 0 10px; text-transform: none;}
+.grid-home .grid-item-primary h3.red { color: #5e798a; }
+.grid-home .grid-item-primary .grid-item-content { padding-right: 40px; }
+.grid-home .grid-item-primary .grid-item-content i { position: absolute; right: 20px; bottom: 0; color: #5e798a;}
+.grid-home .grid-item-tertiary { background-color: #d1d05a; color: #fff; }
+.grid-home .grid-item-tertiary h6 { color: #f6f6f6; text-transform: none;}
+.grid-home .grid-item-tertiary h4 { font-family: 'Affogato-Medium', sans-serif; font-weight: 700; font-size: 2.17vw; color: #f6f6f6; line-height: 1.1; text-transform: none;}
+.grid-home .grid-item-quinary { background-color: #cd7455; }
+.grid-home .grid-item-quinary h6 { color: #f6f6f6; }
+.grid-home .grid-item-quinary h4 { width: 90%; font-family: 'Affogato-Medium', sans-serif; font-weight: 700; font-size: 2.17vw; color: #f6f6f6; line-height: 1.1; margin: 0; }
 
 /* ==========================================================================
 Contact Me
@@ -594,12 +526,12 @@ Contact Me
 	padding-bottom: 30px;
 	text-align: center;
 	background: #eee;
-	background: -webkit-linear-gradient(45deg, #77bcc7 10%, #5E798A 90%); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(45deg, #77bcc7 10%, #5E798A 90%); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(45deg, #77bcc7 10%, #5E798A 90%); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(45deg, #77bcc7 10%, #5E798A 90%); /* Standard syntax */
+	/*background: -webkit-linear-gradient(45deg, #77bcc7 10%, #5E798A 90%); !* For Safari 5.1 to 6.0 *!*/
+	/*background: -o-linear-gradient(45deg, #77bcc7 10%, #5E798A 90%); !* For Opera 11.1 to 12.0 *!*/
+	/*background: -moz-linear-gradient(45deg, #77bcc7 10%, #5E798A 90%); !* For Firefox 3.6 to 15 *!*/
+	/*background: linear-gradient(45deg, #77bcc7 10%, #5E798A 90%); !* Standard syntax *!*/
 }
 
 .contact-me h2 {
-	color: #f5f5f5;
+	color: #5E798A;
 }
