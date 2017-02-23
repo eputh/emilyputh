@@ -117,10 +117,22 @@ a {
 
 p {
 	color: #454545;
-	font-family: "Playfair Display", serif;
+	font-family: "Affogato-Medium", sans-serif;
+	font-weight: 300;
 	font-size: 18px;
 	line-height: 30px;
 	text-align: left;
+}
+
+h2 span{
+	text-align: center;
+	display:block;
+	font-family: 'Affogato-Bold', 'Open Sans', sans-serif;
+	font-size:80px;
+	text-transform: uppercase;
+	line-height: 80px;
+	color:#5e798a;
+	background: rgba(248,249,249,0.9);
 }
 
 a:focus, img:focus, button:focus, .btn:focus {outline: none;}
@@ -153,18 +165,46 @@ text-align: center;
 	border-color: #5E798A !important;
 }
 
-.scroll {
-	position:absolute;
-	top:50vh;
+.intro-scroll {
+	z-index: 1000;
+	position: absolute;
+	text-align: center;
+	left: 0px;
+	bottom: 0;
 	width:100%;
-	-webkit-animation:bounce 1s infinite;
+}
+.scroll {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-color: #d1d05a;
+	transform: rotate(45deg);
+	position: relative;
+	margin-bottom: -52px;
+	box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.32);
+
+}
+.scroll i {
+	color: #f5f5f5;
+	font-size: 25px;
+	transform: rotate(-45deg);
+	position: absolute;
+	left: 50%;
+	margin-left: -22px;
+	top: 25px;
+	/*-webkit-animation:bounce 1s infinite;*/
 }
 
-@-webkit-keyframes bounce {
-	0%       {top:50vh }
-	25%, 75% { top:51vh }
-	50%      { top:52vh }
-	100%     {top:50vh}
+/*@-webkit-keyframes bounce {*/
+	/*0%       {top:50vh }*/
+	/*25%, 75% { top:51vh }*/
+	/*50%      { top:52vh }*/
+	/*100%     {top:50vh}*/
+/*}*/
+.line{
+	width: 55px;
+	padding-bottom: 25px;
+	border-bottom: 5px solid #d1d05a;
 }
 
 /* ==========================================================================
@@ -274,20 +314,12 @@ Main
 	font-family: 'Affogato-Medium', 'Open Sans', sans-serif;
 	font-size:35px;
 	line-height:40px;
-	color:#454545;
+	color:#e1ca4e;
 	font-weight:600;
 }
 
-.main-home-wrapper h2 span{
-	display:block;
-	font-family: 'Affogato-Bold', 'Open Sans', sans-serif;
-	font-size:70px;
-	line-height: 100px;
-	color:#5E798A;
-}
-
 .main-home-wrapper p{
-	font-family: "Playfair Display", serif;
+	font-family: "Affogato-Medium", sans-serif;
 	font-size:18px;
 	line-height:30px;
 	color:#454545;
@@ -298,7 +330,7 @@ Footer
 ========================================================================== */
 
 .footer {
-	background-color:#454545;
+	background-color:#f8f9f9;
 	padding-top:30px;
 	padding-bottom:30px;
 	position: relative;
@@ -353,16 +385,17 @@ footer[role="footer"] nav{
 	display:block;
 	width:42px;
 	height:42px;
-	background-color:#5E798A;
-	color:#FFF;
+	background-color:#fff;
+	color:#5E798A;
 	line-height:42px;
 	font-size:20px;
-	border-radius:100%;
 	text-align:center;
+	box-shadow: 5px 15px 30px rgba(0,0,0,.15);
 }
 
 .footer ul[role="social-icons"] > li:hover a{
-	background-color:#77bcc7;
+	transform: rotate(-45deg);
+	color:#d1d05a;
 }
 
 .footer .copy-right{
@@ -476,13 +509,13 @@ Skills
 	margin: 20px 5px;
 	padding: 3rem;
 	background-color: white;
-	box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.12);
+	box-shadow: 5px 15px 30px rgba(0,0,0,.15);
 }
 .skills .container .skill p:nth-child(2) {
 	margin: 1rem 0;
 }
 .skills .container .skill .name {
-	color: #5E798A;
+	color: #5e798a;
 	font-weight: bold;
 	font-size: 30px;
 	line-height: 34px;
@@ -557,6 +590,8 @@ Featured
 Contact Me
 ========================================================================== */
 .contact-me {
+	padding-top: 30px;
+	padding-bottom: 30px;
 	text-align: center;
 	background: #eee;
 	background: -webkit-linear-gradient(45deg, #77bcc7 10%, #5E798A 90%); /* For Safari 5.1 to 6.0 */
